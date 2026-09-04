@@ -105,7 +105,21 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 .nunc .word i { color: var(--rubrum); font-style: inherit; }
 .nunc .colophon { margin: 0; color: var(--muted); font-size: 0.95em; font-variant-numeric: tabular-nums; }
-.nunc .colophon time { color: var(--ink); }
+.rotor { margin: 6px 0 0; font-family: var(--font-display); font-weight: 300; font-size: clamp(1.25rem, 2.4vw, 2rem); line-height: 1.2; letter-spacing: -0.015em; max-width: 28ch; min-height: 2.4em; }
+.rotor span { display: inline-block; transition: opacity 420ms ease-out, transform 420ms ease-out; }
+.rotor span.out { opacity: 0; transform: translateY(-6px); }
+
+/* ---------- Fragen ---------- */
+.qlist { border-top: 1px solid var(--rule); max-width: var(--measure); }
+.q { border-bottom: 1px solid var(--rule); }
+.q summary { list-style: none; cursor: pointer; padding: 16px 32px 16px 0; position: relative; font-family: var(--font-display); font-weight: 300; font-size: clamp(1.1rem, 1.6vw, 1.45rem); line-height: 1.25; letter-spacing: -0.01em; transition: color 180ms ease-out; }
+.q summary::-webkit-details-marker { display: none; }
+.q summary::after { content: "+"; position: absolute; right: 4px; top: 14px; color: var(--rubrum); font-size: 1.2em; line-height: 1; transition: transform 200ms ease-out; }
+.q[open] summary::after { transform: rotate(45deg); }
+.q summary:hover { color: var(--rubrum); }
+.q p { margin: -4px 0 18px; padding-right: 32px; font-size: 0.92em; color: var(--ink-2); max-width: none; }
+.q p a { color: var(--rubrum-ink); }
+.qcta { margin-top: 28px; }
 
 /* ---------- sections ---------- */
 section { padding: clamp(56px, 10vh, 120px) var(--gutter); }
