@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nunc.gannaca.com/sitemap.xml
